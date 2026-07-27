@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KinderGarden UX Prototype</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="prototype-page">
+      <div class="prototype-stage" aria-label="Задание на сопоставление формы и домика">
+        <img class="background-art" src="./assets/background.svg" alt="" draggable="false" />
+        <div class="source-well" aria-hidden="true"></div>
+
+        <button class="draggable-shape" type="button" aria-label="Перетащи фигуру к подходящему домику">
+          <span></span>
+        </button>
+
+        <div class="house house-correct" aria-label="Домик с треугольной крышей">
+          <img src="./assets/true-default.svg" alt="" draggable="false" />
+        </div>
+        <div class="house house-wrong" aria-label="Домик с трапециевидной крышей">
+          <img src="./assets/wrong-default.svg" alt="" draggable="false" />
+        </div>
+
+        <button class="speaker-button" type="button" aria-label="Прослушать задание ещё раз">
+          <img src="./assets/speaker-default.svg" alt="" draggable="false" />
+        </button>
+
+        <div class="success-burst" aria-live="polite"></div>
+        <audio src="./assets/instruction.mp3" preload="auto"></audio>
+      </div>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>

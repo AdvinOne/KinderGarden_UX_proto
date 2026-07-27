@@ -1,0 +1,39 @@
+:root { --background: #101426; }
+* { box-sizing: border-box; }
+html, body { min-height: 100%; margin: 0; overflow: hidden; overscroll-behavior: none; }
+body { background: var(--background); font-family: Arial, Helvetica, sans-serif; }
+button { font: inherit; }
+.prototype-page { display: grid; min-height: 100svh; place-items: center; background: #101426; }
+.prototype-stage { position: relative; width: min(100vw, calc(100svh * 2.0923077)); aspect-ratio: 1360 / 650; overflow: hidden; user-select: none; touch-action: none; background: #8af1ff; }
+.background-art { position: absolute; inset: 0; display: block; width: 100%; height: 100%; pointer-events: none; }
+.source-well { position: absolute; z-index: 3; left: 20.125%; top: 10.72%; width: 16.45%; height: 31.07%; border-radius: 50%; background: #fdfdfe; pointer-events: none; }
+.draggable-shape { position: absolute; z-index: 8; left: 22.86%; top: 17.8%; width: 11.03%; height: 14.2%; padding: 0; border: 0; background: transparent; cursor: grab; touch-action: none; transition: transform 420ms cubic-bezier(0.2, .88, .2, 1), opacity 240ms ease; }
+.draggable-shape span { display: block; width: 100%; height: 100%; border-radius: 24%; background: #fc83ff; clip-path: polygon(39% 0, 61% 0, 100% 86%, 96% 100%, 4% 100%, 0 86%); filter: drop-shadow(0 5px 0 rgb(220 72 231 / 8%)); }
+.draggable-shape:hover span { filter: brightness(1.03) drop-shadow(0 8px 12px rgb(113 36 128 / 14%)); }
+.draggable-shape:focus-visible { outline: 5px solid rgb(87 95 225 / 70%); outline-offset: 8px; border-radius: 24px; }
+.draggable-shape.is-dragging { z-index: 30; cursor: grabbing; transition: none; }
+.draggable-shape.is-dragging span { transform: scale(1.04); filter: drop-shadow(0 18px 20px rgb(62 30 95 / 24%)); }
+.prototype-stage.is-solved .draggable-shape { opacity: 0; pointer-events: none; }
+.house { position: absolute; z-index: 6; top: 29.6%; width: 19.85%; height: 46.15%; pointer-events: none; transition: transform 180ms ease; }
+.house img { display: block; width: 100%; height: 100%; pointer-events: none; }
+.house-correct { left: 41.1%; }
+.house-wrong { left: 66.95%; }
+.house.is-hovered { transform: translateY(-1.2%) scale(1.025); }
+.house.is-wrong { animation: wrong-shake 560ms ease; }
+.speaker-button { position: absolute; z-index: 10; left: 12.35%; top: 70.92%; display: grid; width: 8.83%; aspect-ratio: 1; place-items: center; padding: 0; border: 0; border-radius: 50%; background: transparent; cursor: pointer; }
+.speaker-button img { width: 62.5%; height: 62.5%; pointer-events: none; }
+.speaker-button:hover { background: rgb(255 255 255 / 15%); }
+.speaker-button:focus-visible { outline: 5px solid rgb(87 95 225 / 70%); outline-offset: 3px; }
+.speaker-button.is-playing { animation: speaker-wiggle 420ms ease-in-out infinite; }
+.speaker-button.is-playing img { width: 80%; height: 80%; }
+.success-burst { position: absolute; z-index: 20; left: 44.3%; top: 22%; min-width: 130px; color: white; font-size: clamp(20px, 2.1vw, 38px); font-weight: 800; text-align: center; text-shadow: 0 3px 0 rgb(25 91 101 / 20%); pointer-events: none; opacity: 0; transform: translateY(12px) scale(.7); }
+.prototype-stage.is-solved .success-burst { animation: success-pop 1.5s ease forwards; }
+@keyframes speaker-wiggle { 0%, 100% { transform: rotate(-3deg) scale(1); } 50% { transform: rotate(3deg) scale(1.035); } }
+@keyframes wrong-shake { 0%, 100% { transform: translateX(0); } 20% { transform: translateX(-2.5%); } 40% { transform: translateX(2.5%); } 60% { transform: translateX(-1.6%); } 80% { transform: translateX(1.6%); } }
+@keyframes success-pop { 0% { opacity: 0; transform: translateY(12px) scale(.7); } 22%, 70% { opacity: 1; transform: translateY(0) scale(1); } 100% { opacity: 0; transform: translateY(-16px) scale(1.05); } }
+@media (max-width: 760px) and (orientation: portrait) {
+  .prototype-page::before { position: fixed; z-index: 100; inset: 0; display: grid; place-items: center; padding: 28px; background: #7d8bf5; color: white; font-size: 22px; font-weight: 700; line-height: 1.35; text-align: center; content: "Поверните устройство горизонтально"; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; }
+}
