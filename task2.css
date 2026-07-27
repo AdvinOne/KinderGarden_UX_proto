@@ -18,7 +18,7 @@ button { font: inherit; }
 .answer .answer-feedback { display: none; }
 .answer.is-feedback .answer-default { display: none; }
 .answer.is-feedback .answer-feedback { display: block; }
-.answer-correct.is-feedback { width: 11.69%; transform: translate(-5.9%, -3.9%); }
+.answer-wrong.is-feedback { width: 11.69%; transform: translate(-5.9%, -3.9%); }
 .answer:disabled { cursor: default; }
 .answer:focus-visible, .control:focus-visible { outline: 5px solid rgb(87 95 225 / 75%); outline-offset: 4px; }
 
