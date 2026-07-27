@@ -15,9 +15,11 @@ button { font: inherit; }
 .answer { top: 28.4%; width: 19.85%; height: 46.15%; }
 .answer-correct { left: 40.15%; }
 .answer-wrong { left: 64%; }
-.answer:hover { filter: brightness(1.03); }
+.answer .answer-feedback { display: none; }
+.answer.is-feedback .answer-default { display: none; }
+.answer.is-feedback .answer-feedback { display: block; }
+.answer:disabled { cursor: default; }
 .answer:focus-visible, .control:focus-visible { outline: 5px solid rgb(87 95 225 / 75%); outline-offset: 4px; }
-.answer-wrong.is-wrong { animation: wrong-shake 420ms ease; }
 
 .control { aspect-ratio: 1; border-radius: 50%; }
 .speaker-button { left: 14.01%; top: 74.46%; width: 5.52%; }
@@ -32,7 +34,6 @@ button { font: inherit; }
 .prototype-stage.is-solved .answer, .prototype-stage.is-solved .control, .prototype-stage.is-solved .instruction-text { display: none; }
 
 @keyframes speaker-wiggle { 0%,100% { transform: rotate(-3deg) scale(1); } 50% { transform: rotate(3deg) scale(1.04); } }
-@keyframes wrong-shake { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-2.5%); } 50% { transform: translateX(2.5%); } 75% { transform: translateX(-1.2%); } }
 @media (max-width: 760px) and (orientation: portrait) {
   .prototype-page::before { position: fixed; z-index: 100; inset: 0; display: grid; place-items: center; padding: 28px; background: #7d8bf5; color: white; font-size: 22px; font-weight: 700; line-height: 1.35; text-align: center; content: "Поверните устройство горизонтально"; }
 }
