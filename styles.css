@@ -33,6 +33,26 @@ button { font: inherit; }
 .instruction-text img { display: block; width: 100%; height: auto; }
 .prototype-stage.is-solved .answer, .prototype-stage.is-solved .control, .prototype-stage.is-solved .instruction-text { display: none; }
 
+@media (hover: hover) and (pointer: fine) {
+  .answer:not(:disabled) img,
+  .control img {
+    transition: transform 180ms cubic-bezier(.2, .75, .25, 1.25), filter 180ms ease;
+    transform-origin: 50% 55%;
+  }
+
+  .answer:not(:disabled):hover img,
+  .control:hover img {
+    transform: translateY(-2.5%) scale(1.045);
+    filter: brightness(1.04) drop-shadow(0 8px 8px rgb(42 38 100 / 18%));
+  }
+
+  .answer:not(:disabled):active img,
+  .control:active img {
+    transform: translateY(0) scale(.975);
+    transition-duration: 70ms;
+  }
+}
+
 @keyframes speaker-wiggle { 0%,100% { transform: rotate(-3deg) scale(1); } 50% { transform: rotate(3deg) scale(1.04); } }
 @media (max-width: 760px) and (orientation: portrait) {
   .prototype-page::before { position: fixed; z-index: 100; inset: 0; display: grid; place-items: center; padding: 28px; background: #7d8bf5; color: white; font-size: 22px; font-weight: 700; line-height: 1.35; text-align: center; content: "Поверните устройство горизонтально"; }
