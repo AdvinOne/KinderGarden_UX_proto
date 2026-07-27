@@ -1,0 +1,24 @@
+<svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="task=2, variant=false success">
+<g id="success">
+<g id="Group 2136141248" opacity="0.01">
+<g id="Group 2136141247">
+<circle id="Ellipse 3706" cx="69.9994" cy="69.9992" r="62.5" transform="rotate(-33.7428 69.9994 69.9992)" fill="#1F5EFF"/>
+<g id="Mask group">
+<mask id="mask0_1832_56337" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="7" y="7" width="126" height="126">
+<circle id="Ellipse 3707" cx="69.9994" cy="69.9992" r="62.5" transform="rotate(-33.7428 69.9994 69.9992)" fill="#1F5EFF"/>
+</mask>
+<g mask="url(#mask0_1832_56337)">
+<g id="Group 2136141246">
+<circle id="Ellipse 3707_2" cx="135.948" cy="25.9461" r="58.6517" transform="rotate(-33.7428 135.948 25.9461)" stroke="#0648EF" stroke-width="15.8898"/>
+<circle id="Ellipse 3708" cx="4.05147" cy="114.052" r="58.6517" transform="rotate(-33.7428 4.05147 114.052)" stroke="#0648EF" stroke-width="15.8898"/>
+</g>
+</g>
+</g>
+</g>
+<circle id="Ellipse 3709" cx="95.04" cy="39.625" r="15.4848" transform="rotate(-33.7428 95.04 39.625)" fill="white"/>
+<path id="Ellipse 3710" d="M129.568 134.395H18.4756C18.4756 126.755 43.3446 112.333 74.022 112.333C104.699 112.333 129.568 126.755 129.568 134.395Z" fill="#BC2557"/>
+</g>
+</g>
+</g>
+</svg>

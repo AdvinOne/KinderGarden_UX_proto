@@ -1,0 +1,40 @@
+<svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="task=2, variant=true default">
+<g id="default">
+<g id="Group 2136141247">
+<circle id="Ellipse 3706" cx="69.9998" cy="70" r="62.5" transform="rotate(-33.7428 69.9998 70)" fill="#1F5EFF"/>
+<g id="Mask group">
+<mask id="mask0_1832_56140" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="7" y="7" width="126" height="126">
+<circle id="Ellipse 3707" cx="69.9998" cy="70" r="62.5" transform="rotate(-33.7428 69.9998 70)" fill="#1F5EFF"/>
+</mask>
+<g mask="url(#mask0_1832_56140)">
+<g id="Group 2136141246">
+<circle id="Ellipse 3707_2" cx="135.948" cy="25.9469" r="58.6517" transform="rotate(-33.7428 135.948 25.9469)" stroke="#0648EF" stroke-width="15.8898"/>
+<circle id="Ellipse 3708" cx="4.05196" cy="114.053" r="58.6517" transform="rotate(-33.7428 4.05196 114.053)" stroke="#0648EF" stroke-width="15.8898"/>
+</g>
+</g>
+</g>
+</g>
+<circle id="Ellipse 3709" cx="95.0405" cy="39.6261" r="15.4848" transform="rotate(-33.7428 95.0405 39.6261)" fill="white"/>
+</g>
+<g id="success">
+<g id="Group 2136141249" opacity="0.01">
+<g id="Group 2136141247_2">
+<circle id="Ellipse 3706_2" cx="69.9998" cy="69.9997" r="62.5" transform="rotate(-33.7428 69.9998 69.9997)" fill="#1F5EFF"/>
+<g id="Mask group_2">
+<mask id="mask1_1832_56140" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="7" y="7" width="126" height="126">
+<circle id="Ellipse 3707_3" cx="69.9998" cy="69.9997" r="62.5" transform="rotate(-33.7428 69.9998 69.9997)" fill="#1F5EFF"/>
+</mask>
+<g mask="url(#mask1_1832_56140)">
+<g id="Group 2136141246_2">
+<circle id="Ellipse 3707_4" cx="135.948" cy="25.9466" r="58.6517" transform="rotate(-33.7428 135.948 25.9466)" stroke="#0648EF" stroke-width="15.8898"/>
+<circle id="Ellipse 3708_2" cx="4.05196" cy="114.053" r="58.6517" transform="rotate(-33.7428 4.05196 114.053)" stroke="#0648EF" stroke-width="15.8898"/>
+</g>
+</g>
+</g>
+</g>
+<circle id="Ellipse 3709_2" cx="95.0405" cy="39.6255" r="15.4848" transform="rotate(-33.7428 95.0405 39.6255)" fill="white"/>
+</g>
+</g>
+</g>
+</svg>

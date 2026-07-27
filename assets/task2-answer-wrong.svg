@@ -1,0 +1,22 @@
+<svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="task=2, variant=false default">
+<g id="default">
+<g id="Group 2136141247">
+<circle id="Ellipse 3706" cx="69.9998" cy="69.9997" r="62.5" transform="rotate(-33.7428 69.9998 69.9997)" fill="#1F5EFF"/>
+<g id="Mask group">
+<mask id="mask0_1832_56139" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="7" y="7" width="126" height="126">
+<circle id="Ellipse 3707" cx="69.9998" cy="69.9997" r="62.5" transform="rotate(-33.7428 69.9998 69.9997)" fill="#1F5EFF"/>
+</mask>
+<g mask="url(#mask0_1832_56139)">
+<g id="Group 2136141246">
+<circle id="Ellipse 3707_2" cx="135.948" cy="25.9466" r="58.6517" transform="rotate(-33.7428 135.948 25.9466)" stroke="#0648EF" stroke-width="15.8898"/>
+<circle id="Ellipse 3708" cx="4.05196" cy="114.053" r="58.6517" transform="rotate(-33.7428 4.05196 114.053)" stroke="#0648EF" stroke-width="15.8898"/>
+</g>
+</g>
+</g>
+</g>
+<circle id="Ellipse 3709" cx="95.04" cy="39.6259" r="15.4848" transform="rotate(-33.7428 95.04 39.6259)" fill="white"/>
+<path id="Ellipse 3710" d="M129.569 134.396H18.4761C18.4761 126.756 43.3451 112.333 74.0225 112.333C104.7 112.333 129.569 126.756 129.569 134.396Z" fill="#BC2557"/>
+</g>
+</g>
+</svg>
