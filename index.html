@@ -12,10 +12,19 @@
       <img class="screen task-screen" src="./assets/task1.svg" alt="" draggable="false">
       <img class="screen success-screen" src="./assets/task1-success.svg" alt="Задание выполнено верно" draggable="false">
 
-      <button class="answer answer-correct" type="button" aria-label="Выбрать первый домик"></button>
-      <button class="answer answer-wrong" type="button" aria-label="Выбрать второй домик"></button>
-      <button class="control speaker-button" type="button" aria-label="Прослушать задание"></button>
-      <button class="control text-button" type="button" aria-label="Показать текст задания"></button>
+      <button class="answer answer-correct" type="button" aria-label="Выбрать первый домик">
+        <img src="./assets/task1-answer-correct.svg" alt="" draggable="false">
+      </button>
+      <button class="answer answer-wrong" type="button" aria-label="Выбрать второй домик">
+        <img src="./assets/task1-answer-wrong.svg" alt="" draggable="false">
+      </button>
+      <button class="control speaker-button" type="button" aria-label="Прослушать задание">
+        <img class="speaker-default" src="./assets/speaker-default.svg" alt="" draggable="false">
+        <img class="speaker-playing" src="./assets/speaker-playing.svg" alt="" draggable="false">
+      </button>
+      <button class="control text-button" type="button" aria-label="Показать текст задания" aria-expanded="false">
+        <img src="./assets/text-icon.svg" alt="" draggable="false">
+      </button>
 
       <div class="instruction-text" role="dialog" aria-label="Текст задания" hidden>
         <img src="./assets/task1-text.svg" alt="Текст задания">
