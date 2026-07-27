@@ -21,30 +21,45 @@ function playInstruction() {
   instructionAudio.play().catch(() => speaker.classList.remove("is-playing"));
 }
 
-instructionAudio.addEventListener("play", () => speaker.classList.add("is-playing"));
-instructionAudio.addEventListener("pause", () => speaker.classList.remove("is-playing"));
-instructionAudio.addEventListener("ended", () => speaker.classList.remove("is-playing"));
-speaker.addEventListener("click", playInstruction);
-
-textButton.addEventListener("click", () => {
-  const willOpen = textPanel.hidden;
-  textPanel.hidden = !willOpen;
-  textButton.setAttribute("aria-expanded", String(willOpen));
-});
-
-wrong.addEventListener("click", () => {
-  wrong.classList.remove("is-wrong");
-  void wrong.offsetWidth;
-  wrong.classList.add("is-wrong");
-});
-
-correct.addEventListener("click", () => {
+function showSuccess() {
   if (solved) return;
   solved = true;
   stop(instructionAudio);
   stage.classList.add("is-solved");
   successAudio.currentTime = 0;
   successAudio.play().catch(() => {});
+}
+
+instructionAudio.addEventListener("play", () => speaker.classList.add("is-playing"));
+instructionAudio.addEventListener("pause", () => speaker.classList.remove("is-playing"));
+instructionAudio.addEventListener("ended", () => speaker.classList.remove("is-playing"));
+speaker.addEventListener("click", (event) => {
+  event.stopPropagation();
+  playInstruction();
+});
+
+textButton.addEventListener("click", (event) => {
+  event.stopPropagation();
+  const willOpen = textPanel.hidden;
+  textPanel.hidden = !willOpen;
+  textButton.setAttribute("aria-expanded", String(willOpen));
+});
+
+wrong.addEventListener("click", (event) => {
+  event.preventDefault();
+  event.stopPropagation();
+
+  // Неверный выбор не меняет экран: ребёнок остаётся в задании
+  // и может выбрать другой домик.
+  wrong.classList.remove("is-wrong");
+  void wrong.offsetWidth;
+  wrong.classList.add("is-wrong");
+});
+
+correct.addEventListener("click", (event) => {
+  event.preventDefault();
+  event.stopPropagation();
+  showSuccess();
 });
 
 window.setTimeout(playInstruction, 2000);
