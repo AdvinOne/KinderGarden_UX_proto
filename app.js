@@ -8,6 +8,8 @@ const instructionAudio = document.querySelector(".instruction-audio");
 const successAudio = document.querySelector(".success-audio");
 
 let solved = false;
+let answerLocked = false;
+let wrongStateTimer;
 
 function stop(audio) {
   audio.pause();
@@ -48,18 +50,25 @@ textButton.addEventListener("click", (event) => {
 wrong.addEventListener("click", (event) => {
   event.preventDefault();
   event.stopPropagation();
+  if (answerLocked || solved) return;
 
-  // Неверный выбор не меняет экран: ребёнок остаётся в задании
-  // и может выбрать другой домик.
-  wrong.classList.remove("is-wrong");
-  void wrong.offsetWidth;
-  wrong.classList.add("is-wrong");
+  window.clearTimeout(wrongStateTimer);
+  wrong.classList.add("is-feedback");
+  wrongStateTimer = window.setTimeout(() => {
+    wrong.classList.remove("is-feedback");
+  }, 650);
 });
 
 correct.addEventListener("click", (event) => {
   event.preventDefault();
   event.stopPropagation();
-  showSuccess();
+  if (answerLocked || solved) return;
+
+  answerLocked = true;
+  correct.classList.add("is-feedback");
+  correct.disabled = true;
+  wrong.disabled = true;
+  window.setTimeout(showSuccess, 650);
 });
 
 window.setTimeout(playInstruction, 2000);
