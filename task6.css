@@ -29,6 +29,19 @@ button { font: inherit; }
   height: 100%;
   pointer-events: none;
 }
+.final-screen {
+  z-index: 50;
+  display: none;
+}
+.prototype-stage.is-final .final-screen {
+  display: block;
+}
+.prototype-stage.is-final .task-screen,
+.prototype-stage.is-final .answer,
+.prototype-stage.is-final .control,
+.prototype-stage.is-final .instruction-text {
+  display: none;
+}
 
 .answer, .control {
   position: absolute;
