@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задание 5</title>
+  <link rel="stylesheet" href="./task5.css">
+</head>
+<body>
+  <main class="prototype-page">
+    <section class="prototype-stage" aria-label="Задание 5">
+      <img class="screen task-screen" src="./assets/task5.svg" alt="" draggable="false">
+      <img class="screen success-screen" src="./assets/task5_success.svg" alt="Задание выполнено верно" draggable="false">
+
+      <button class="answer answer-correct" type="button" aria-label="Открыть коробку">
+        <img class="answer-default" src="./assets/task5-answer-default.svg" alt="Коробка с вопросительным знаком" draggable="false">
+        <img class="answer-feedback" src="./assets/task5-answer-success.svg" alt="" draggable="false">
+      </button>
+
+      <button class="control speaker-button" type="button" aria-label="Прослушать задание">
+        <img class="speaker-default" src="./assets/speaker-default.svg" alt="" draggable="false">
+        <img class="speaker-playing" src="./assets/speaker-playing.svg" alt="" draggable="false">
+      </button>
+      <button class="control text-button" type="button" aria-label="Показать текст задания" aria-expanded="false">
+        <img src="./assets/text-icon.svg" alt="" draggable="false">
+      </button>
+
+      <div class="instruction-text" role="dialog" aria-label="Текст задания" hidden>
+        <img src="./assets/task5-text.svg" alt="Текст задания">
+      </div>
+
+      <audio class="instruction-audio" src="./assets/task5-instruction.mp3" preload="auto"></audio>
+      <audio class="success-audio" src="./assets/task5-success.mp3" preload="auto"></audio>
+    </section>
+  </main>
+  <script src="./task5.js"></script>
+</body>
+</html>
