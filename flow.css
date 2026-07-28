@@ -1,0 +1,30 @@
+:root {
+  color-scheme: dark;
+  background: #101426;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #101426;
+}
+
+.flow-page {
+  width: 100vw;
+  min-height: 100svh;
+}
+
+.task-frame {
+  display: block;
+  width: 100vw;
+  height: 100svh;
+  border: 0;
+  background: #101426;
+}
