@@ -7,12 +7,15 @@
   <link rel="stylesheet" href="./flow.css">
 </head>
 <body>
-  <main class="flow-page">
+  <main class="flow-page is-loading">
     <iframe
       class="task-frame"
       title="Интерактивное задание"
       allow="autoplay"
     ></iframe>
+    <div class="loading-screen" role="status" aria-live="polite" aria-label="Загрузка задания">
+      <span class="loading-spinner" aria-hidden="true"></span>
+    </div>
   </main>
   <script src="./flow.js"></script>
 </body>
