@@ -53,6 +53,10 @@ correct.addEventListener("click", () => {
   stopInstruction();
   correct.classList.add("is-feedback");
   answers.forEach((answer) => { answer.disabled = true; });
+
+  window.setTimeout(() => {
+    document.querySelector(".prototype-stage").classList.add("is-final");
+  }, 800);
 });
 
 window.setTimeout(playInstruction, 2000);
